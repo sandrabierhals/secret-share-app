@@ -74,7 +74,7 @@ http://127.0.0.1:5000
 
 # Running with Docker
 
-docker build -t secret-share-app:latest . (build the Docker iamge)
+docker build -t secret-share-app:latest . (build the Docker image)
 docker run \
 --name secret-share-container \
 -p 5000:5000 \
