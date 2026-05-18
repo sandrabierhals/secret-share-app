@@ -37,6 +37,7 @@ The application allows users to:
 
 # Project Structure
 
+```text
 secret-share-app/
 │
 ├── app/
@@ -59,6 +60,7 @@ secret-share-app/
 ├── .dockerignore
 ├── .gitignore
 └── README.md
+```
 
 # Running the Project Locally (Flask)
 
