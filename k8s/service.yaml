@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+
+metadata:
+  name: secret-share-service
+
+spec:
+  type: NodePort # expoe porta do cluster - porta do container
+
+  selector:
+    app: secret-share # liga o service nos pods com label
+
+  ports:
+    - port: 5000
+      targetPort: 5000
+      nodePort: 30007

@@ -1,0 +1,18 @@
+services:
+
+  secret-share-app:
+
+    build: .
+
+    container_name: secret-share-container
+
+    ports:
+      - "5000:5000"
+
+    volumes:
+      - ./app:/app/app # bind mount: sincroniza meu codigo local com o codigo dentro do container
+      - secret-data:/data
+    restart: unless-stopped
+
+volumes:
+    secret-data:

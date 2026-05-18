@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Secret Share</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <main class="page">
+        <section class="card">
+            <h1>Secret Share</h1>
+            <p class="subtitle">Create a temporary secret and share it safely.</p>
+
+            <form method="POST">
+                <label for="secret">Your secret</label>
+
+                <textarea
+                    id="secret"
+                    name="secret"
+                    rows="6"
+                    placeholder="Write your secret..."
+                    required
+                ></textarea>
+
+                <label for="expires_in">Validity</label>
+                <select name="expires_in" id="expires_in" required>
+                    <option value="5">5 minutes</option>
+                    <option value="60">1 hour</option>
+                    <option value="1440">1 day</option>
+                </select>
+
+                <label class="checkbox">
+                    <input type="checkbox" name="one_time">
+                    Open only once
+                </label>
+
+                <button type="submit">Create Secret</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

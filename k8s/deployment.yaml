@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: secret-share-deployment
+
+spec:
+  replicas: 1 # numero de instancias rodando
+
+  selector:
+    matchLabels:
+      app: secret-share
+
+  template:
+    metadata:
+      labels:
+        app: secret-share
+
+    spec:
+      containers:
+        - name: secret-share-container
+          image: secret-share-app:latest # usa minha imgagem docker
+          imagePullPolicy: Never
+
+          ports:
+            - containerPort: 5000
+
+          volumeMounts:
+            - name: secret-data
+              mountPath: /data
+
+      volumes:
+        - name: secret-data
+          emptyDir: {}
