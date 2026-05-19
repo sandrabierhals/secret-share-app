@@ -6,7 +6,7 @@ Unlike the original Yopass architecture, this project does not implement zero-kn
 
 The main goal of the project is to explore infrastructure, containerization, orchestration and deployment concepts rather than advanced cryptographic security mechanisms.
 
-This project was developed as part of a Distributed Computing assignment using:
+## This project was developed as part of a Distributed Computing assignment using:
 
 - Python 3.12
 - Flask
@@ -16,7 +16,7 @@ This project was developed as part of a Distributed Computing assignment using:
 - Kubernetes
 - Minikube
 
-The application allows users to:
+## The application allows users to:
 
 - Create temporary secrets
 - Share secrets using unique URLs
